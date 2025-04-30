@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import Header from './Header'
-
+import { checkValidData } from '../utils/validate'
 const Login = () => {
     let [isSignInForm,setIsSignInForm]= useState(true)
     let toggleSignInForm=()=>{
         setIsSignInForm(!isSignInForm)
+    }
+    let handleButtonClick = ()=>{
+     checkValidData(email , password)
     }
   return (
     <div>
@@ -29,6 +32,7 @@ const Login = () => {
         placeholder='enter password' 
         className='p-4 my-4 w-full bg-gray-700 rounded' />
         <button 
+        onClick={handleButtonClick}
         className='p-4 my-6 bg-red-700 w-full'>{isSignInForm ? "Sign In" : "Sign Up"}</button>
         <p 
          onClick={toggleSignInForm}
