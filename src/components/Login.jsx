@@ -34,9 +34,8 @@ const Login = () => {
       }).then(() => {
         // Profile updated!
         const {uid,email,displayName ,photoURL} = auth.currentUser;
-                  dispatch(addUser({uid:uid , email:email , displayName : displayName ,photoURL:photoURL}))
+          dispatch(addUser({uid:uid , email:email , displayName : displayName ,photoURL:photoURL}))
         
-      navigate("/browse")
       //  console.log(user)
         // ...
       }).catch((error) => {
@@ -56,14 +55,13 @@ signInWithEmailAndPassword(auth, email.current.value,password.current.value)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    navigate("/browse")
     // console.log(user)
     // ...
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    // setErrorMessage(errorCode + errorMessage)
+    setErrorMessage(errorMessage)
 
   });
 

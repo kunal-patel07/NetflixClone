@@ -15,3 +15,6 @@
  - created redux store with userSlice 
  - implemented sign out
  - update profile api call used
+ - BugFix  :Display name and profile photo
+ - if my user is logged in it cant  be able to access to login page and if is not logged in then it
+   won't be able to go to browse 
