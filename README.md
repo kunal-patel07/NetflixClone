@@ -20,7 +20,7 @@
    won't be able to go to browse 
  - unsubscribe to the onAuth state change callback
  - registered tmdb api and api call and get access token  
- = call api of now playing movies 
+ - call api of now playing movies 
  - created custom hook for nowPlaying movie 
  - updated store with moviedata
  - create movie slice 
@@ -28,3 +28,11 @@
  - fetch data for trailer video 
  - embedded the yt video and make it auto play and mute
  - added tailwind to maincontainer to make it looks like netflix
+ - built secondary components 
+ - built movie list
+ - built movie cart 
+ - TMDB image CDN url 
+ - improved UI Tailwind
+ - created usePopularMovies custom hook  
+ - created useUpcomingMovies and topRatedMovies custom hook
+  
