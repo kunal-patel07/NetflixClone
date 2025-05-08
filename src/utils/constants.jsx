@@ -22,3 +22,7 @@ export let SUPPORTED_LANGUAGES = [
   { identifier: "hindi", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+
+export let OPENAI_KEY ="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"
+
+
