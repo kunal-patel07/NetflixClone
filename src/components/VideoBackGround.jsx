@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { API_OPTIONS } from "../utils/constants";
-import { useDispatch, useSelector } from "react-redux";
 
 const VideoBackGround = ({ movieId }) => {
  
@@ -23,7 +22,7 @@ const VideoBackGround = ({ movieId }) => {
   }, []);  return (
     <div className="w-full">
       <iframe
-      className="w-screen aspect-video"
+      className="w-screen aspect-video m-0 p-0"
         src={`https://www.youtube.com/embed/${trailerVideo}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&playsinline=1&loop=1&playlist=${trailerVideo}`
         }
         title="Exterritorial | Official Trailer | Netflix"

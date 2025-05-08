@@ -35,4 +35,8 @@
  - improved UI Tailwind
  - created usePopularMovies custom hook  
  - created useUpcomingMovies and topRatedMovies custom hook
-  
+ - GPT search Page
+ - GPT search Bar
+ - Added Multi Language Feature
+
+ 

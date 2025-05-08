@@ -2,9 +2,9 @@ import React from "react";
 import MovieCard from "./MovieCard";
 
 const MovieList = ({ title, movies }) => {
-  console.log(movies);
+
   return (
-    <div className="p-6 bg-black ">
+    <div className="p-6  bg-black ">
         <h1 className="text-2xl py-3 mb-2  text-white">{title}</h1>
       <div className="flex overflow-x-scroll  hide-scrollbar">
         {movies && Array.isArray(movies) ? (
