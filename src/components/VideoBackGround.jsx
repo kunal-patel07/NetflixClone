@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { API_OPTIONS } from "../utils/constants";
+import { useSelector } from "react-redux";
 
 const VideoBackGround = ({ movieId }) => {
- 
+   
+  let movieTrailer = useSelector(store => store.movies.trailerVideo)
   let [trailerVideo , setTrailerVideo] =useState([])
   let getMovieVideos = async () => {
     let data = await fetch(
       `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`,
       API_OPTIONS   
-    );
+    );  
     let json = await data.json();
     // console.log(json);
     let trailer = json.results.filter((videos) => videos.type === "Trailer");
@@ -17,9 +19,14 @@ const VideoBackGround = ({ movieId }) => {
     // console.log(trailer[0].key)
   };
 
+
+
   useEffect(() => {
-    getMovieVideos();
-  }, []);  return (
+    !movieTrailer &&  getMovieVideos();
+  }, []);
+  
+  
+  return (
     <div className="w-full">
       <iframe
       className="w-screen aspect-video m-0 p-0"

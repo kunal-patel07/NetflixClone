@@ -5,9 +5,14 @@ import { BG_URL } from "../utils/constants";
 
 let GptSearch = () => {
   return (
-    <div className="">
-      <div className="absolute -z-10">
-        <img src={BG_URL} />
+    <div className="sm:block">
+      <div className="fixed -z-10 sm:block">
+        <img 
+          src={BG_URL} 
+          alt="background"
+          className="w-screen h-screen sm:w-auto sm:h-auto object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50 sm:hidden" /> {/* Overlay only on mobile */}
       </div>
 
       <GptSearchBar />
